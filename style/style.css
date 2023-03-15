@@ -1,0 +1,120 @@
+  @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+
+:root{
+  /* Primary */
+
+--Light-Cyan: hsl(193, 38%, 86%);
+--Neon-Green: hsl(150, 100%, 66%);
+
+/* Neutral */
+
+--Grayish-Blue: hsl(217, 19%, 38%);
+--Dark-Grayish-Blue: hsl(217, 19%, 24%);
+--Dark-Blue: hsl(218, 23%, 16%);
+}
+
+.attribution {
+   font-size: 11px; text-align: center;
+  display: none;
+ }
+ .attribution a { color: hsl(228, 45%, 44%); }
+
+ body{
+  box-sizing: border-box;
+  overflow: hidden;
+  height: 100vh; 
+  background: var(--Dark-Blue);
+  font-family: 'Manrope';
+  display: grid;
+  place-content: center;
+ }
+
+ main{
+  max-width: 30rem;
+  position: relative;
+ }
+
+ section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+ main section:first-child{
+  justify-content: space-between;
+  padding:  2rem;
+  padding-bottom: 3rem;
+  border-radius: 1rem ;
+  text-align: center;
+  background: var(--Dark-Grayish-Blue);
+ }
+
+ main >section:first-child small{
+  margin-top: .5rem;
+  place-self: center;
+  color: var(--Neon-Green);
+  letter-spacing: .2rem;
+ }
+
+ main > section:first-child q{
+  font-size: 1.75rem;
+  color: var(--Light-Cyan);
+  padding: 1rem;
+  font-weight: 800;
+ }
+ 
+ .divider {
+  object-fit: contain;
+  width: 80%;
+  margin-block: 0.9rem 1.2rem;
+ }
+
+ main section:nth-child(2){
+  justify-content: center;
+  position: absolute;
+  right: 13.5rem;
+  bottom: -1.5rem ;
+ }
+
+
+  .dice_container{
+  background: var(--Neon-Green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  padding: .5rem;
+  cursor: pointer;
+  inset:  auto auto 0 50%;
+  transition: all .3s ease;
+ }
+
+
+ .dice_container:hover{
+  box-shadow: .1rem .1rem 2rem .05rem var(--Neon-Green);
+ }
+
+
+ @media screen and (max-width: 550px){
+
+  
+   main > section:first-child q{
+    font-size: 1.5rem;
+   }
+
+ .divider {
+  object-fit: contain;
+  width: 90%;
+  margin-block: 0.9rem 1.2rem;
+ }
+
+ main section:nth-child(2){
+  justify-content: center;
+  position: absolute;
+  right: 44%;
+  bottom: -1.5rem ;
+ }
+ } 
